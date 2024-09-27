@@ -213,7 +213,7 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      <div className={styles.recentSpells}>
+      {/* <div className={styles.recentSpells}>
         <h2>Recently Cast Spells</h2>
         <ul>
           {recentSpells.map((spell, index) => (
@@ -222,7 +222,7 @@ const App: React.FC = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
 
       <CustomSpellCreator setToastData={setToastData} />
     </div>
