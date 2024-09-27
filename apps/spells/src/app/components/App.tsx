@@ -11,7 +11,7 @@ const spellCastingSDK = new SpellCastingSDK(
   process.env.NEXT_PUBLIC_API_BASE_URL ?? 'https://the-coven.vercel.app'
 );
 
-const PARTYKIT_HOST = process.env.NEXT_PUBLIC_PARTYKIT_HOST || 'localhost:1999';
+const PARTYKIT_HOST = process.env.NEXT_PUBLIC_PARTYKIT_HOST ?? 'localhost:1999';
 
 interface RawSpellData {
   _name: string;
