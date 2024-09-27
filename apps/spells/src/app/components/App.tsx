@@ -124,39 +124,6 @@ const App: React.FC = () => {
         </span>
       </h1>
       <div className={styles.spellList}>
-        <div className={styles.spellListContainer}>
-          <h2>
-            <span role="img" aria-label="Autumn leaf">
-              🍂
-            </span>{' '}
-            Autumn Recipes{' '}
-            <span role="img" aria-label="Maple leaf">
-              🍁
-            </span>
-          </h2>
-          <ul className={styles.recipeItemList}>
-            {recipes.map((recipe) => (
-              <li
-                key={recipe.id}
-                onClick={() => handleRecipeClick(recipe)}
-                className={`${styles.spellItem} ${
-                  selectedRecipe && selectedRecipe.id === recipe.id
-                    ? styles.selected
-                    : ''
-                }`}
-              >
-                <span role="img" aria-label="Crystal ball">
-                  🔮
-                </span>{' '}
-                {recipe.name}{' '}
-                <span role="img" aria-label="Magic wand">
-                  🪄
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
         <div className={styles.selectedSpellContainer}>
           <h2>
             <span role="img" aria-label="Crescent moon">
@@ -210,6 +177,38 @@ const App: React.FC = () => {
               </span>
             </p>
           )}
+        </div>
+        <div className={styles.spellListContainer}>
+          <h2>
+            <span role="img" aria-label="Autumn leaf">
+              🍂
+            </span>{' '}
+            Autumn Recipes{' '}
+            <span role="img" aria-label="Maple leaf">
+              🍁
+            </span>
+          </h2>
+          <ul className={styles.recipeItemList}>
+            {recipes.map((recipe) => (
+              <li
+                key={recipe.id}
+                onClick={() => handleRecipeClick(recipe)}
+                className={`${styles.spellItem} ${
+                  selectedRecipe && selectedRecipe.id === recipe.id
+                    ? styles.selected
+                    : ''
+                }`}
+              >
+                <span role="img" aria-label="Crystal ball">
+                  🔮
+                </span>{' '}
+                {recipe.name}{' '}
+                <span role="img" aria-label="Magic wand">
+                  🪄
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
